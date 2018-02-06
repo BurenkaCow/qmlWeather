@@ -1,0 +1,18 @@
+<RCC>
+    <qresource prefix="/">
+        <file>resources/icons/gear.png</file>
+        <file>qml/main.qml</file>
+        <file>resources/icons/weather-few-clouds.png</file>
+        <file>resources/icons/weather-fog.png</file>
+        <file>resources/icons/weather-overcast.png</file>
+        <file>resources/icons/weather-showers.png</file>
+        <file>resources/icons/weather-sleet.png</file>
+        <file>resources/icons/weather-snow.png</file>
+        <file>resources/icons/weather-storm.png</file>
+        <file>resources/icons/weather-sunny.png</file>
+        <file>resources/icons/weather-sunny-very-few-clouds.png</file>
+        <file>resources/icons/weather-thundershower.png</file>
+        <file>qml/DayWeather.qml</file>
+        <file>qml/HourWeather.qml</file>
+    </qresource>
+</RCC>
