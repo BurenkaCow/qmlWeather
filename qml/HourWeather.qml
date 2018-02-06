@@ -14,16 +14,13 @@ Item {
         font.pixelSize: 20
     }
 
-    function getParsedTime()
-    {
-        var hour = timeHour.getHours()
-        var minutes = timeHour.getMinutes()
-        return hour + ":" + minutes
-    }
-
     Text {
         id: time
-        text: getParsedTime()
+        text: {
+            var hour = timeHour.getHours()
+            var minutes = timeHour.getMinutes()
+            return hour + ":" + minutes
+        }
         anchors.horizontalCenter: parent.horizontalCenter
         anchors.bottom: parent.bottom
         font.pixelSize: 20

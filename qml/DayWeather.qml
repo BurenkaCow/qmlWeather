@@ -29,20 +29,17 @@ Item
         }
     }
 
-    function getParsedDate()
-    {
-        var day = weatherDay.dateDay.getDate()
-        if (day < 10)
-            day = "0" + day
-        var month = weatherDay.dateDay.getDay()
-        if (month < 10)
-            month = "0" + month
-        return day + "." + month
-    }
-
     Text {
         id: date
-        text: getParsedDate()
+        text: {
+            var day = weatherDay.dateDay.getDate()
+            if (day < 10)
+                day = "0" + day
+            var month = weatherDay.dateDay.getDay()
+            if (month < 10)
+                month = "0" + month
+            return day + "." + month
+        }
         anchors.horizontalCenter: parent.horizontalCenter
         anchors.bottom: parent.bottom
         font.pixelSize: 20
