@@ -10,7 +10,23 @@ Window {
         id: root
         anchors.fill: parent
 
-        state: "loading"
+        function transliteStateModelToString(state)
+        {
+
+            var str = String
+            switch(state)
+            {
+                case  AppModel.Loading:
+                    root.state = "loading"
+                    break
+                case  AppModel.Ready:
+                    root.state = "ready"
+                    break
+            }
+            return str
+        }
+
+        state: transliteStateModelToString(model.state)
 
         states: [
             State {
@@ -28,15 +44,7 @@ Window {
         AppModel{
             id: model
             onStateChanged: {
-                switch(model.state)
-                {
-                    case  AppModel.loading:
-                        root.state = "loading"
-                        break
-                    case  AppModel.ready:
-                        root.state = "ready"
-                        break
-                }
+                state = transliteStateModelToString(model.state)
             }
         }
 

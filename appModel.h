@@ -12,8 +12,8 @@ class AppModel : public QObject
 public:
     enum class State
     {
-        loading = 0,
-        ready
+        Loading = 0,
+        Ready
     };
     Q_ENUM(State)
 public:
@@ -23,7 +23,7 @@ public:
 signals:
     void StateChanged(void);
 private:
-    State state = State::loading;
+    State state = State::Loading;
 };
 
 Q_DECLARE_METATYPE(AppModel::State)
